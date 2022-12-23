@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import User from './Component/User';
+import UserDemo from './Component/UserDemo';
 
 const user1={
   name:"Akkash",
@@ -16,17 +17,31 @@ const user2={
   lang:["Hindi","English"]
 }
 
+
+const users=[
+  {
+    id:1,
+    name:"Tom Hanks",
+    email:"tom@hanks.com",
+    age:26,
+  },
+  {
+    id:2,
+    name:"Jerry",
+    email:"jerry@55gmail.com",
+    age:28,
+  },
+]
+
+
+
 function App() {
   return (
     <div className="App">
       <h1>React Typescript</h1>
       <User user={user1}/>
       <User user={user2}/>
-{/*       
-      <User name="Tanvir Rifat"age={20}
-       isRegistered={true}
-       lang={["Bangla,English"]}
-       /> */}
+      <UserDemo users={users}/>
     </div>
   );
 }
