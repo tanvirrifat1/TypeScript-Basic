@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import DataFetch from './Component/DataFetch';
 import User from './Component/User';
 import UserDemo from './Component/UserDemo';
 
@@ -42,6 +42,7 @@ function App() {
       <User user={user1}/>
       <User user={user2}/>
       <UserDemo users={users}/>
+      <DataFetch status ="loading"/>
     </div>
   );
 }

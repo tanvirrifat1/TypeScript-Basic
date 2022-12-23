@@ -11,7 +11,7 @@ type UserDemoProps={
 
 const UserDemo = ({users}:UserDemoProps) => {
     return (
-        <div>
+        <div style={{border:"1px solid", margin:"0.10rem",backgroundColor:'goldenrod'}}>
           {users.map((user)=>{
             const {id,name,email,age}=user
             return <div key={id}>
