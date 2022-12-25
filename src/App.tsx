@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
+import Button from './Component/Button';
 import DataFetch from './Component/DataFetch';
+import Post from './Component/Post';
 import User from './Component/User';
 import UserDemo from './Component/UserDemo';
 
@@ -43,6 +45,9 @@ function App() {
       <User user={user2}/>
       <UserDemo users={users}/>
       <DataFetch status ="loading"/>
+      <h1>Children Props</h1>
+      <Button>Click me</Button>
+      <Post></Post>
     </div>
   );
 }
