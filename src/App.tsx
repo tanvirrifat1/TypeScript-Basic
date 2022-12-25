@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Button from './Component/Button';
+import ButtonStyle from './Component/ButtonStyle';
 import DataFetch from './Component/DataFetch';
 import Post from './Component/Post';
 import User from './Component/User';
@@ -35,9 +36,22 @@ const users=[
   },
 ]
 
+const btnStyle={backgroundColor:"red", padding:"100px", height:"20px"}
 
+type user={
+  id:number;
+  name:string;
+}
 
 function App() {
+
+  const [user,setUser]=useState<null | user>(null)
+
+  const handleAddUser=()=>{
+    setUser({id:1,name:'Rifat'})
+    console.log(user)
+  }
+
   return (
     <div className="App">
       <h1>React Typescript</h1>
@@ -45,9 +59,13 @@ function App() {
       <User user={user2}/>
       <UserDemo users={users}/>
       <DataFetch status ="loading"/>
-      <h1>Children Props</h1>
       <Button>Click me</Button>
       <Post></Post>
+      <h2>Style Props</h2>
+      <ButtonStyle btnStyle={btnStyle}/>
+
+      <button onClick={handleAddUser}>Add User</button>
+      <p>{user?.name}</p>
     </div>
   );
 }
