@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 import Button from './Component/Button';
 import ButtonStyle from './Component/ButtonStyle';
+import Counter from './Component/Counter';
 import DataFetch from './Component/DataFetch';
+import NewUser from './Component/NewUser';
 import Post from './Component/Post';
 import User from './Component/User';
 import UserDemo from './Component/UserDemo';
@@ -66,6 +68,11 @@ function App() {
 
       <button onClick={handleAddUser}>Add User</button>
       <p>{user?.name}</p>
+
+      <h2>Typing Events</h2>
+      <NewUser></NewUser>
+       
+       <Counter/>
     </div>
   );
 }
